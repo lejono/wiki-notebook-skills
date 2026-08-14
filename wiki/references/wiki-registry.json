@@ -1,0 +1,31 @@
+{
+  "wikis": [
+    {
+      "name": "physics",
+      "path": "~/wikis/physics_wiki",
+      "index": "physics_index.md",
+      "description": "Curated, fact-checked physics synthesis wiki — verified-or-honestly-labelled results (Pub/JO/CAS/Agent/Unv). PUBLISHABLE tier (can be made public).",
+      "maintainer": "user",
+      "notes": "Own colocated jj repo (never push without being asked). Publishable tier of a two-tier wiki; its private sibling is 'physics-private'. Structure: physics_index -> <section>_map -> pages; standing pages conventions/notation_index/glossary. Run scripts/wiki_ci.py before committing. Read README.md in the wiki root before writing pages.",
+      "topics": [
+        "stochastic dynamics",
+        "decoherence",
+        "open quantum systems"
+      ]
+    },
+    {
+      "name": "physics-private",
+      "path": "~/wikis/physics_wiki_private",
+      "index": "physics_private_index.md",
+      "description": "Private, verified-only wiki for you + collaborators — unpublished results promoted from the notebook. PRIVATE tier; promotable onward to the public 'physics' wiki.",
+      "maintainer": "user",
+      "notes": "Own colocated jj repo (private research — never push without being asked). Verified-only (markers JO/CAS/Agent, never Unv). Structure: by section like 'physics', and EACH section dir carries a verification/ folder that is the source of truth (calculation + checks + receipt/ledger) backing its pages — per section, not per page. Links both ways with 'physics' via relative sibling paths. Promotion ladder: notebook -> private -> public.",
+      "topics": [
+        "stochastic dynamics",
+        "decoherence",
+        "verified results",
+        "private wiki"
+      ]
+    }
+  ]
+}

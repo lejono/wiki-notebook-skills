@@ -1,0 +1,25 @@
+{
+  "repos": [
+    "~/notes",
+    "~/drafts"
+  ],
+  "master_index": "~/notes/notebook_index.md",
+  "notebooks": [
+    {
+      "name": "stochastic",
+      "path": "~/notes/stochastic",
+      "description": "Example: stochastic-dynamics research notebook — Onsager-Machlup actions, fluctuation theorems, open-system dynamics.",
+      "topics": ["stochastic dynamics", "Onsager-Machlup", "fluctuation theorems"],
+      "active": true,
+      "notes": "Substructure: projects/ (subnotebooks — calculation packages plus standing files, see references/subnotebook-structure.md), checks/ (CAS verification scripts)."
+    },
+    {
+      "name": "drafts",
+      "path": "~/drafts",
+      "description": "Draft papers. Do not create notebook pages here — each project directory keeps a NOTEBOOK.md pointer to its subnotebook under the notebook root.",
+      "topics": ["draft papers"],
+      "active": true,
+      "notes": "Overleaf subdirectories are separate repos — do not edit through the notebook repo. common/ holds shared BibTeX/macros."
+    }
+  ]
+}
