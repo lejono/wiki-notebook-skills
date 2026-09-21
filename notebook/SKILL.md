@@ -123,7 +123,13 @@ Never erase a mistake. We need to be able to track errors. If we started with an
 
 ## Page Format
 
-One topic per page, **~200 words** (the CI warns beyond 250). The user reads
+One topic per page. There is no word limit. A page must be **self-contained**:
+a reader who opens it cold can follow it without opening another page first
+(restate the setup, define every symbol). It should also not be too long. Use
+progressive disclosure: when a page grows past what one sitting comfortably
+reads, split it into a lead page that states the result and links to pages for
+each significant step, where a split makes sense. Never compress prose to make a
+page shorter. The user reads
 pages in Obsidian. Every page:
 
 ```markdown
@@ -166,7 +172,7 @@ Notebook-specific navigation rules:
 - When you finish a page that continues an earlier one, go back and set the
   earlier page's **Next:** link. Chains must be walkable both ways.
 
-If more than ~250 words are needed, e.g. to give the answer to a posed problem, don't compress your answer (it will become unreadable), rather break up the  answer into more than one md file. E.g.. The first md file could be the executive summary of the answer, with links to each part of the answer. the other files explain each significant step  (top level Lamport node) required for the answer 
+When an answer is long, e.g. the answer to a posed problem, don't compress it (it will become unreadable); break it up into more than one md file where that makes sense. E.g. the first md file could be the executive summary of the answer, with links to each part of the answer; the other files explain each significant step (top level Lamport node) required for the answer. Each of those pages is still self-contained. The CI only hints at a split on very long pages (beyond 1,500 words); it is a hint, not a limit. 
 
 ## Verification Markers
 

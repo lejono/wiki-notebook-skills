@@ -26,7 +26,9 @@ DEFAULT_REGISTRY = Path(__file__).resolve().parent.parent / "references" / "note
 
 WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]")
 FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
-WORD_LIMIT = 250  # pages should be ~200 words; warn beyond this
+# Pages have no word limit: they must be self-contained but not too long. Beyond SPLIT_HINT words the
+# CI suggests splitting into a lead page plus linked step pages.
+SPLIT_HINT = 1500
 
 
 def parse_frontmatter(text):
@@ -166,8 +168,8 @@ def check_notebook(nb, errors, warnings, infos, all_roots=()):
                 warnings.append(f"[{label}] superseded page missing 'superseded_by:': {p.relative_to(root)}")
             continue
         words = len(strip_frontmatter(e["text"]).split())
-        if words > WORD_LIMIT:
-            warnings.append(f"[{label}] page is {words} words (aim ~200): {p.relative_to(root)}")
+        if words > SPLIT_HINT:
+            warnings.append(f"[{label}] page is {words} words; consider a lead page with linked step pages: {p.relative_to(root)}")
         if "verification" not in fm:
             warnings.append(f"[{label}] missing 'verification:' marker: {p.relative_to(root)}")
         if "date" not in fm:
